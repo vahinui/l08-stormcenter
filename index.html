@@ -46,81 +46,64 @@
     </nav>
 
     
-<!--CONTENT HERE-->    
-  <main> 
-      
-       <figure class="firstphoto">
-        <img src="images/franklin%20test%201.jpg" alt="Franklin lansdacpe picture" 
-        sizes="(max-width:600px) 80vw, 100vw" srcset="images/franklin test1 x2. images/franklin test2 x3, images/franklin test3 x1">
-      </figure>
-      
-      <h2>Franklin</h2>
-      
-      <section class="summary">
-        <h3>Franklin: Weather Data</h3>
-        <h3>Sunny</h3>
-        <p id="chill"></p>
-            <ul class="container">
-                <li class="flexItem">High</li>
-                <li class="flexItem">Low</li>
-                <li class="flexItem">Summary</li>
-                <li class="flexItem">Predication</li>
-                <li class="flexItem">Wind Speed</li>
-<!---ADDED A WIND CHILL COLUMN--->                
-                <li class="flexItem">Wind Chill</li>
-            </ul>
-            <ul class="container">
-                <li class="flexItem2">90&#8457;</li>
-                <li class="flexItem2">66&#8457;</li>
-                <li class="flexItem2">Sunny</li>
-                <li class="flexItem2">0&#37;</li>
-                <li class="flexItem2">5 mph SW</li>
-<!---ADDED THE RESULT--->
-                <li class="flexItem2">81.10</li>
-            </ul>
-          
-          
-              
-      </section>
-        
-      <section class="forecast">
-        <h3>Ten Day Forecast</h3>
-            <ul class="container">
-                <li class="flexItem3">Day 1</li>
-                <li class="flexItem3">Day 2</li>
-                <li class="flexItem3">Day 3</li>
-                <li class="flexItem3">Day 4</li>
-                <li class="flexItem3">Day 5</li>
-                <li class="flexItem3">Day 6</li>
-                <li class="flexItem3">Day 7</li>
-                <li class="flexItem3">Day 8</li>
-                <li class="flexItem3">Day 9</li>
-                <li class="flexItem3">Day 10</li>                
-          </ul>
-           <ul class="container">
-                <li class="flexItem4">89&deg; F</li>
-                <li class="flexItem4">87&deg; F</li>
-                <li class="flexItem4">78&deg; F</li>
-                <li class="flexItem4">75&deg; F</li>
-                <li class="flexItem4">72&deg; F</li>
-                <li class="flexItem4">72&deg; F</li>
-                <li class="flexItem4">79&deg; F</li>
-                <li class="flexItem4">83&deg; F</li>
-                <li class="flexItem4">85&deg; F</li>
-                <li class="flexItem4">89&deg; F</li>                
-          </ul>
-          
+<!-- CONTENT HERE -->
+<main>
+    <h1>Course Proposal Application</h1>
+        <form method="get" action="thanks.html">
+            <fieldset>
+                <legend>Applicant Information</legend>
+                <label class="top">First Name* <input type="text" name="fname" required></label>
+                <label class="top">Last Name* <input type="text" name="lname" required></label>
+                <label class="top">Phone <input type="tel" name="phone" placeholder="12355551234"></label>
+                <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                <label class="top">Website <input type="url" name="url" placeholder="http://" ></label>          
+            </fieldset>
             
-    </section>
-      
-    <article>
-      <h3 class="box">Franklin Breaks Record</h3>
-        <img class="img2" src="images/sunnygirl.jpg" alt="girl">      
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. </p>
-    </article>		  
-  
-  </main>
+            <fieldset>
+                <legend>Couse Information</legend>
+                <div>Audience</div>
+                <label class="sbs"><input type="radio" name="audience" value="beginner">Beginner</label> 
+                <label class="sbs"><input type="radio" name="audience" value="intermediater">Intermediate</label> 
+                <label class="sbs"><input type="radio" name="audience" value="Advanced">Advanced</label> 
+                
+                <div>Software Needed</div>
+                <label class="sbs"><input type="checkbox" name="editing" value="yes"> Photo Editing</label>
+                <label class="sbs"><input type="checkbox" name="code" value="yes"> Coding</label>
+                <label class="sbs"><input type="checkbox" name="process" value="yes"> Preprocessor</label>
+                <label class="sbs"><input type="checkbox" name="client" value="yes">  FTP Client</label>
+            
+            
+            </fieldset>
+            
+            <fieldset>
+                <legend>Funding</legend>
+                <label class="top">Anticipated Completion Date <input type="date" name="completeDate"></label>
+                <label class="top">Course Subject
+                <select name="subject">
+                    <option value="">Please Select &#9662;</option>
+                <option value="software">Software Development</option>
+                <option value="creative">Creative Professional</option>
+                <option value="info">Information Technology</option>
+                <option value="data">Data Professional</option>
+                <option value="construction">Construction</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="business">Business Professional</option>
+                <option value="security">Cyber Security</option>           
+                </select>
+            </label>
+            
+            <label class="top">How Many Authors <input type=number name="authors"></label>
+            
+            </fieldset>
+            
+            <input type="submit" value="Propose  My Course" class="submitBtn">                                               
+    
+    
+        </form>
 
+        
+    </main>
+    
     <!--FOOTER HERE-->
   <footer>
     <section class="contact">
