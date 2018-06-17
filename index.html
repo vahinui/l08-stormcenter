@@ -3,8 +3,8 @@
 <head> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>L06: Get ready to know your weather</title>
-    <meta name="description" content="l07-assignment">
+    <title>L08: Sorm Center</title>
+    <meta name="description" content="l08-assignment">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main-8.css" type= "text/css">
     <link rel="stylesheet" href="styles/medium-8.css" media="(min-width:37.5em)" type="text/css">
@@ -48,56 +48,50 @@
     
 <!-- CONTENT HERE -->
 <main>
-    <h1>Course Proposal Application</h1>
+    <h1> Weather Report</h1>
         <form method="get" action="thanks.html">
+            <h2>Applicant Information</h2>
             <fieldset>
-                <legend>Applicant Information</legend>
-                <label class="top">First Name* <input type="text" name="fname" required></label>
-                <label class="top">Last Name* <input type="text" name="lname" required></label>
-                <label class="top">Phone <input type="tel" name="phone" placeholder="12355551234"></label>
-                <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
-                <label class="top">Website <input type="url" name="url" placeholder="http://" ></label>          
+                <label class="one">First Name* <input type="text" name="fname" required></label>
+                <label class="one">Last Name* <input type="text" name="lname" pattern="[A-Za-z]{5,}" title="5 charecter or more" required></label>
+                <label class="one">Phone* <input type="tel" name="phone" required></label>
+                <label class="one">Email <input type="email" name="email" placeholder="username@gmail.com"></label>
+                <label class="one">Zip Code* <input type="zipcode" name="zip code" required></label>
             </fieldset>
             
+            <h2>Storm Information</h2>
             <fieldset>
-                <legend>Couse Information</legend>
-                <div>Audience</div>
-                <label class="sbs"><input type="radio" name="audience" value="beginner">Beginner</label> 
-                <label class="sbs"><input type="radio" name="audience" value="intermediater">Intermediate</label> 
-                <label class="sbs"><input type="radio" name="audience" value="Advanced">Advanced</label> 
+                <div>Storm Type :</div>
+                <label class="two"><input type="checkbox" name="flood" value="yes"> Flash Flood</label>
+                <label class="two"><input type="checkbox" name="hurricane" value="yes"> Hail Hurricane</label>
+                <label class="two"><input type="checkbox" name="thunder" value="yes"> Thunderstorm</label>
+                <label class="two"><input type="checkbox" name="tornado" value="yes">  Tornado</label>
                 
-                <div>Software Needed</div>
-                <label class="sbs"><input type="checkbox" name="editing" value="yes"> Photo Editing</label>
-                <label class="sbs"><input type="checkbox" name="code" value="yes"> Coding</label>
-                <label class="sbs"><input type="checkbox" name="process" value="yes"> Preprocessor</label>
-                <label class="sbs"><input type="checkbox" name="client" value="yes">  FTP Client</label>
-            
+                <div>Storm Severity</div>
+                <label class="scd"><input type="range" min="1" max="10" value="5" class="slider"></label>
+                
+                <div>In-Danger level :</div><label class="two"><input type="radio" name="yes"> Yes</label>
+                <label class="two"><input type="radio" name="no"> No</label>
+                
+                <div>Give Us More Information :</div><textarea rows="5" cols="50" name="comment" form="usrform"></textarea>
             
             </fieldset>
             
+            <h2> Date and Location</h2>
             <fieldset>
-                <legend>Funding</legend>
-                <label class="top">Anticipated Completion Date <input type="date" name="completeDate"></label>
-                <label class="top">Course Subject
-                <select name="subject">
-                    <option value="">Please Select &#9662;</option>
-                <option value="software">Software Development</option>
-                <option value="creative">Creative Professional</option>
-                <option value="info">Information Technology</option>
-                <option value="data">Data Professional</option>
-                <option value="construction">Construction</option>
-                <option value="manufacturing">Manufacturing</option>
-                <option value="business">Business Professional</option>
-                <option value="security">Cyber Security</option>           
-                </select>
-            </label>
-            
-            <label class="top">How Many Authors <input type=number name="authors"></label>
-            
+           <label class="one">Storm Date <input type="date" name="completeDate"></label>
+                <label class="one">Storm Region
+                    <select name="subject">
+                    <option value="">Select Region ...&#9662;</option>
+                    <option value="franklin">Franklin</option>
+                    <option value="greenville">Greenville</option>
+                    <option value="springfield">Srpingfield</option>
+                    </select>
+                </label>
             </fieldset>
             
-            <input type="submit" value="Propose  My Course" class="submitBtn">                                               
-    
+            
+            <input type="submit" value="Send my Report" class="submitBtn">                                 
     
         </form>
 
@@ -115,7 +109,8 @@
     <section class="footer-bar">&copy;2018 | All Rights Reserved | Get Ready to Know Your Weather | <span id="currentdate"></span>
     </section>
   </footer>
-  <script src="scripts/currentdate.js"></script>
+    <script src="scripts/currentdate.js"></script>
     <script src="scripts/windchill.js"></script>
+    <script src="scripts/slider.js"></script>
 </body>
 </html>
